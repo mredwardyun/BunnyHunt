@@ -17,6 +17,7 @@ public class MainActivity extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        Log.i(TAG, "in onCreate");
 
         final Button b1 = (Button) findViewById(R.id.button);
 
@@ -45,14 +46,20 @@ public class MainActivity extends ActionBarActivity {
         Log.i(TAG, "in onPause");
     }
 
-    onPause
-            (),
-    onRestart
-            (),
-    onStop
-            (),
-    onDestroy
-            ())
+    protected void onRestart() {
+        super.onStart();
+        Log.i(TAG, "in onRestart");
+    }
+
+    protected void onStop() {
+        super.onStart();
+        Log.i(TAG, "in onStop");
+    }
+
+    protected void onDestroy() {
+        super.onStart();
+        Log.i(TAG, "in onDestroy");
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
