@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:weightSum="1"
+    tools:context=".MainActivity"
+    android:id="@+id/popUpEl"
+    android:background="#ffb7b7b7">
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/userInput"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="0.12" />
+
+    <TextView
+        android:layout_width="219dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Spell the object!"
+        android:id="@+id/msgDisp"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="0.09"
+        android:textAlignment="center" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Submit"
+        android:id="@+id/submitButton"
+        android:layout_gravity="right" />
+
+    <Button
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:text="Close"
+        android:id="@+id/closeButton"
+        android:layout_gravity="center_horizontal"
+        android:gravity="end"
+        android:textAlignment="center"
+        android:singleLine="true" />
+</LinearLayout>
