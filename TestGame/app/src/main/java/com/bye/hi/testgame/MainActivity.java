@@ -25,6 +25,7 @@ import static android.view.View.OnClickListener;
 
 public class MainActivity extends ActionBarActivity {
     // hello from Zeke!!
+    // goodbye
 
     ImageButton bathtub = null;
     ImageButton shampoo = null;
