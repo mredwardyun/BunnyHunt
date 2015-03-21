@@ -25,8 +25,8 @@
             android:label="@string/title_activity_bedroom" >
         </activity>
         <activity
-            android:name=".Menu"
-            android:label="@string/title_activity_menu" >
+            android:name=".MainMenu"
+            android:label="@string/title_activity_main_menu" >
         </activity>
     </application>
 
