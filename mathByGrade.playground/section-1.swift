@@ -4,6 +4,7 @@ import UIKit
 
 var gradeLevel:Int
 
+// Give the answer you want and the child's grade level, this function returns a random math function that evaluates to the answer you want
 func mathByGrade(wantedAnswer: UInt32, gradeLevel: UInt32) -> String {
     let ranGrade = Int(arc4random_uniform(gradeLevel)) + 1
     if (ranGrade == 1){
@@ -60,6 +61,7 @@ func findFactors(wantedAnswer: UInt32) -> [Int] {
     return factors
 }
 
+// Test function. Iterates through all possible letter values and grade levels to make sure that an error is never returned
 func test(){
     for index in 1...26 {
         for index2 in 1...5{
@@ -67,13 +69,6 @@ func test(){
         }
     }
 }
-
-mathByGrade(2, 5)
-mathByGrade(2, 5)
-mathByGrade(2, 5)
-mathByGrade(2, 5)
-mathByGrade(2, 5)
-mathByGrade(2, 5)
 
 
 
