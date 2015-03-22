@@ -4,96 +4,127 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin"
-    tools:context="com.bye.hi.testgame.bedroom"
-    android:background="@drawable/bedbgsmall">
+    tools:context=".kitchen"
+    android:background="@drawable/kitchen">
 
     <ImageButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/poster"
-        android:src="@drawable/postersmall"
+        android:id="@+id/stove"
+        android:src="@drawable/stoveclocksmall"
         android:background="@null"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginLeft="48dp"
-        android:layout_marginStart="48dp" />
+        android:layout_below="@+id/heart3kitch"
+        android:layout_toLeftOf="@+id/chair"
+        android:layout_toStartOf="@+id/chair"
+        android:layout_marginTop="56dp" />
 
     <ImageButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/window"
-        android:src="@drawable/windowsmall"
-        android:background="@null"
-        android:layout_alignRight="@+id/bed"
-        android:layout_alignEnd="@+id/bed"
-        android:layout_alignTop="@+id/poster" />
-
-    <ImageButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/bed"
-        android:src="@drawable/thebed"
-        android:background="@null"
-        android:layout_below="@+id/window"
+        android:id="@+id/fridge"
+        android:src="@drawable/fridgesmall"
+        android:layout_alignBottom="@+id/stove"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginTop="65dp" />
+        android:background="@null" />
 
     <ImageButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/books"
-        android:src="@drawable/bookssmall"
+        android:id="@+id/table"
+        android:src="@drawable/tablesmall"
+        android:translationZ="1dp"
         android:background="@null"
-        android:layout_below="@+id/heart3bed"
+        android:layout_marginBottom="144dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/chair"
+        android:src="@drawable/bunnychair"
+        android:background="@null"
+        android:layout_alignBottom="@+id/table"
+        android:layout_toRightOf="@+id/pot"
+        android:layout_toEndOf="@+id/pot" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/pot"
+        android:src="@drawable/pot"
+        android:background="@null"
+        android:layout_alignTop="@+id/stove"
         android:layout_centerHorizontal="true" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:id="@+id/hintTextBed"
-        android:layout_above="@+id/hintButtonBed"
-        android:layout_alignRight="@+id/bed"
-        android:layout_alignEnd="@+id/bed"
-        android:focusable="true"
+        android:text="Medium Text"
+        android:id="@+id/hintTextKitch"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_below="@+id/bed" />
+        android:layout_above="@+id/hintButtonKitch"
+        android:layout_alignRight="@+id/fridge"
+        android:layout_alignEnd="@+id/fridge"
+        android:layout_below="@+id/chair" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Hint"
-        android:id="@+id/hintButtonBed"
+        android:id="@+id/hintButtonKitch"
         android:layout_alignParentBottom="true"
-        android:layout_alignLeft="@+id/poster"
-        android:layout_alignStart="@+id/poster" />
+        android:layout_toLeftOf="@+id/pot"
+        android:layout_toStartOf="@+id/pot" />
 
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/heart1bed"
+        android:id="@+id/heart1kitch"
         android:src="@drawable/heart45"
-        android:layout_alignParentTop="true" />
-
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/halfheart1bed"
-        android:src="@drawable/halfheart45"
-        android:layout_above="@+id/portrait"
+        android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:visibility="invisible" />
+        android:layout_alignParentStart="true" />
 
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/heart2bed"
+        android:id="@+id/halfheart1kitch"
+        android:src="@drawable/halfheart45"
+        android:visibility="invisible"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/heart2kitch"
         android:src="@drawable/heart45"
-        android:layout_below="@+id/heart1bed"
+        android:layout_below="@+id/heart1kitch"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/halfheart2kitch"
+        android:src="@drawable/halfheart45"
+        android:visibility="invisible"
+        android:layout_alignTop="@+id/heart2kitch"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/heart3kitch"
+        android:src="@drawable/heart45"
+        android:layout_below="@+id/heart2kitch"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:visibility="visible" />
@@ -101,33 +132,10 @@
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/halfheart2bed"
+        android:id="@+id/halfheart3kitch"
         android:src="@drawable/halfheart45"
         android:visibility="invisible"
-        android:layout_alignTop="@+id/heart2bed"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:focusable="true" />
-
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/heart3bed"
-        android:src="@drawable/heart45"
-        android:layout_below="@+id/heart2bed"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:visibility="visible" />
-
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/halfheart3bed"
-        android:src="@drawable/halfheart45"
-        android:visibility="invisible"
-        android:focusable="true"
-        android:focusableInTouchMode="true"
-        android:layout_below="@+id/heart2bed"
+        android:layout_below="@+id/heart2kitch"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 
@@ -135,25 +143,23 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceSmall"
-        android:id="@+id/hintDispBed"
-        android:autoText="false"
-        android:singleLine="false"
-        android:visibility="visible"
+        android:id="@+id/hintDispKitch"
+        android:layout_alignTop="@+id/hintButtonKitch"
+        android:layout_toRightOf="@+id/table"
         android:textSize="20dp"
-        android:layout_alignParentBottom="true"
-        android:layout_toLeftOf="@+id/window"
-        android:layout_toStartOf="@+id/window"
-        android:layout_below="@+id/hintTextBed"
-        android:paddingTop="6dp" />
+        android:layout_alignBottom="@+id/hintButtonKitch"
+        android:layout_alignRight="@+id/chair"
+        android:layout_alignEnd="@+id/chair" />
 
     <ImageButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/levelUpBed"
+        android:id="@+id/levelUpKitch"
         android:src="@drawable/arrow"
         android:background="@null"
-        android:layout_alignParentBottom="true"
-        android:layout_alignRight="@+id/hintTextBed"
-        android:layout_alignEnd="@+id/hintTextBed"
-        android:visibility="invisible" />
+        android:visibility="invisible"
+        android:layout_alignBottom="@+id/hintDispKitch"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
 </RelativeLayout>

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:orientation="vertical" android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
     android:id="@+id/loseLifeE"
-    android:background="#ffd2cfca">
+    android:background="@drawable/dialoguebox">
 
     <RelativeLayout
         android:layout_width="fill_parent"
@@ -13,11 +13,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="Ouch! You lost a life! Be careful."
+            android:text="Wrong item! \nBe careful!"
             android:id="@+id/lifeDisp"
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="89dp" />
+            android:layout_marginTop="17dp" />
 
         <Button
             android:layout_width="wrap_content"
@@ -25,7 +25,8 @@
             android:text="Close"
             android:id="@+id/closeLife"
             android:layout_below="@+id/lifeDisp"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="60dp" />
+            android:layout_centerHorizontal="true" />
+
     </RelativeLayout>
+
 </LinearLayout>

@@ -5,48 +5,21 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity"
     android:clickable="false"
-    android:background="@drawable/stairsh"
+    android:background="@drawable/stairssmall"
     android:visibility="visible">
 
     <ImageButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/vase"
+        android:background="@null"
         android:src="@drawable/vase"
-        android:background="@null"
+        android:layout_marginRight="47dp"
+        android:layout_marginEnd="47dp"
         android:layout_centerVertical="true"
-        android:layout_alignRight="@+id/imageButton"
-        android:layout_alignEnd="@+id/imageButton"
+        android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginRight="30dp"
-        android:layout_marginBottom="10dp" />
-
-    <ImageButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/sink"
-        android:src="@drawable/sink"
-        android:background="@null"
-        android:layout_alignParentTop="true"
-        android:layout_toEndOf="@+id/bathtub"
-        android:layout_toRightOf="@+id/bathtub" />
-
-    <ImageButton
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:id="@+id/shampoo"
-        android:src="@drawable/portrait"
-        android:background="@null"
-        android:clickable="true"
-        android:layout_gravity="bottom"
-        android:visibility="visible"
-        android:cropToPadding="false"
-        android:paddingLeft="0dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginRight="100dp"
-        android:layout_above="@+id/vase"
-        android:layout_marginBottom="90dp" />
+        android:layout_marginBottom="16dp" />
 
     <ImageButton
         android:layout_width="wrap_content"
@@ -56,93 +29,134 @@
         android:background="@null"
         android:layout_gravity="bottom"
         android:nestedScrollingEnabled="true"
-        android:layout_above="@+id/bathtub"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginLeft="120dp"
-        android:layout_marginStart="98dp"
-        android:layout_marginBottom="30dp" />
+        android:layout_alignBottom="@+id/Bunny"
+        android:layout_centerHorizontal="true" />
 
-    <ImageButton
+    <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/bathtub"
-        android:src="@drawable/blank"
-        android:background="@null"
-        android:layout_column="2"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:visibility="visible"
-        android:layout_alignLeft="@+id/ball"
-        android:layout_alignStart="@+id/ball"
-        android:layout_alignParentBottom="true" />
-
-    <TextView
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:text="New Text"
-        android:id="@+id/clueDisp"
-        android:layout_toEndOf="@+id/ball"
-        android:layout_below="@+id/ball"
+        android:id="@+id/Bunny"
+        android:src="@drawable/bunnysmall"
+        android:layout_marginTop="49dp"
+        android:layout_alignTop="@+id/vase"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 
-    <LinearLayout
-        android:orientation="vertical"
-        android:layout_width="200dp"
-        android:layout_height="match_parent"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="false"
-        android:layout_toStartOf="@+id/bathtub"
-        android:id="@+id/linearLayout"
-        android:layout_alignBottom="@+id/sink"
-        android:layout_toLeftOf="@+id/bathtub">
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/heart1"
-            android:src="@drawable/heart"
-            android:focusableInTouchMode="true" />
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/heart2"
-            android:src="@drawable/heart"
-            android:focusableInTouchMode="true" />
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/heart3"
-            android:src="@drawable/heart"
-            android:focusableInTouchMode="false" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="50dp"
+    <ImageButton
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerVertical="true"
-        android:layout_toLeftOf="@+id/vase"
-        android:layout_toStartOf="@+id/vase"
-        android:id="@+id/linearLayout2">
+        android:id="@+id/portrait"
+        android:src="@drawable/portraitsmall"
+        android:background="@null"
+        android:layout_below="@+id/heart1stairs"
+        android:layout_toLeftOf="@+id/ball"
+        android:layout_toStartOf="@+id/ball" />
 
-    </LinearLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:id="@+id/hintTextStairs"
+        android:layout_below="@+id/ball"
+        android:layout_above="@+id/hintButtonStairs"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:typeface="normal"
+        android:visibility="visible" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hint"
+        android:id="@+id/hintButtonStairs"
+        android:layout_alignParentBottom="true"
+        android:layout_toLeftOf="@+id/hintDispStairs"
+        android:layout_toStartOf="@+id/hintDispStairs" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/heart1stairs"
+        android:src="@drawable/heart45"
+        android:layout_alignParentTop="true"
+        android:visibility="visible" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/halfheart1stairs"
+        android:src="@drawable/halfheart45"
+        android:layout_above="@+id/portrait"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:visibility="visible" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/heart2stairs"
+        android:src="@drawable/heart45"
+        android:layout_alignTop="@+id/portrait"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:visibility="visible" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/halfheart2stairs"
+        android:src="@drawable/halfheart45"
+        android:visibility="visible"
+        android:layout_alignTop="@+id/heart2stairs"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/heart3stairs"
+        android:src="@drawable/heart45"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/heart2stairs"
+        android:visibility="visible" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/halfheart3stairs"
+        android:src="@drawable/halfheart45"
+        android:visibility="visible"
+        android:layout_alignTop="@+id/heart3stairs"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Hint"
+        android:id="@+id/hintDispStairs"
+        android:layout_alignTop="@+id/hintButtonStairs"
+        android:textSize="20dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/vase"
+        android:layout_alignEnd="@+id/vase"
+        android:paddingTop="8dp"
+        android:layout_alignLeft="@+id/ball"
+        android:layout_alignStart="@+id/ball" />
 
     <ImageButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/imageButton"
-        android:src="@drawable/blank"
+        android:id="@+id/levelUpStairs"
+        android:src="@drawable/arrow"
         android:background="@null"
-        android:layout_column="2"
-        android:layout_toRightOf="@+id/linearLayout"
-        android:visibility="visible"
+        android:visibility="invisible"
+        android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:layout_below="@+id/vase"
-        android:layout_alignBottom="@+id/vase" />
+        android:layout_alignParentEnd="true" />
 
 </RelativeLayout>

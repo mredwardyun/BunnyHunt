@@ -24,22 +24,21 @@ import java.util.Random;
 import static android.view.View.OnClickListener;
 
 
-public class bedroom extends ActionBarActivity {
-    // hello from Zeke!!
-    // goodbye
+public class kitchen extends ActionBarActivity {
 
     private static int totalNum = 4;
-    private static int hintNum = 0;
     private boolean levelClear = false;
+    private static int hintNum= 0;
+
+    public static ImageButton stove = null;
+    public static ImageButton fridge = null;
+    public static ImageButton table = null;
+    public static ImageButton pot = null;
+
+    public static ImageButton chair = null;
+    public static ImageButton levelUp = null;
 
     public static Button hintButton = null;
-
-    public static ImageButton poster = null;
-    public static ImageButton window = null;
-    public static ImageButton bed = null;
-    public static ImageButton books = null;
-
-    public static ImageButton levelUp = null;
 
 
     PopupWindow promptGuess = null;
@@ -51,89 +50,90 @@ public class bedroom extends ActionBarActivity {
 
     public static int curClueNum = 0;
 
+
     public static Boolean[] clueState = {false,false,false,false};
 
     public static String[] myObj = new String[totalNum];
-    public static String[] objArray = {"art","window","bed","book"};
+    public static String[] objArray = {"stove", "fridge","table", "pot"};
 
 
     public static String[] myClue = new String[totalNum];
     public static String[] clueArray = {
-            "My sister likes to sing, my brother likes to fart\n" +
-                    "Hanging on my wall, my kindergarten _ _ _",
+            "Look at these carrots, what a treasure trove.\n" +
+                    "Let’s cut them up and cook them on the _ _ _ _ _ ",
 
-            "Momma went to buy some cookie dough,\n" +
-                    "And she’s back, I see her out of my _ _ _ _ _ _",
+            "On my way to school I cross the bridge,\n" +
+                    "But oh no! I left my lunch in the _ _ _ _ _ _",
 
-            "It’s a comfortable place, where I rest my head.\n" +
-                    "Where I wake up, and where I go to _ _ _",
+            "Table",
 
-            "My favorite thing in my room, take a look,\n" +
-                    "The best way to pass time is to read a _ _ _ _",
+            "I put my veggies here and wait until they’re hot\n" +
+                    "Once they’re ready, take them out of the _ _ _ "
     };
-
 
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_bedroom);
+        setContentView(R.layout.activity_kitchen);
 
-        poster = (ImageButton) this.findViewById(R.id.poster);
-        window = (ImageButton) this.findViewById(R.id.window);
-        bed = (ImageButton) this.findViewById(R.id.bed);
-        books = (ImageButton) this.findViewById(R.id.books);
+        stove = (ImageButton) this.findViewById(R.id.stove);
+        fridge = (ImageButton) this.findViewById(R.id.fridge);
+        table = (ImageButton) this.findViewById(R.id.table);
+        chair = (ImageButton) this.findViewById(R.id.chair);
+        chair.setClickable(false);
+        pot = (ImageButton) this.findViewById(R.id.pot);
 
-        hintButton = (Button) this.findViewById(R.id.hintButtonBed);
-        levelUp = (ImageButton) findViewById(R.id.levelUpBed);
+        hintButton = (Button) this.findViewById(R.id.hintButtonKitch);
+        levelUp = (ImageButton) findViewById(R.id.levelUpKitch);
 
 
-        Activity.heart1 = (ImageView) this.findViewById(R.id.heart1bed);
-        Activity.heart2 = (ImageView) this.findViewById(R.id.heart2bed);
-        Activity.heart3 = (ImageView) this.findViewById(R.id.heart3bed);
+        Activity.heart1 = (ImageView) this.findViewById(R.id.heart1kitch);
+        Activity.heart2 = (ImageView) this.findViewById(R.id.heart2kitch);
+        Activity.heart3 = (ImageView) this.findViewById(R.id.heart3kitch);
 
-        Activity.halfheart1 = (ImageView) this.findViewById(R.id.halfheart1bed);
-        Activity.halfheart2 = (ImageView) this.findViewById(R.id.halfheart2bed);
-        Activity.halfheart3 = (ImageView) this.findViewById(R.id.halfheart3bed);
+        Activity.halfheart1 = (ImageView) this.findViewById(R.id.halfheart1kitch);
+        Activity.halfheart2 = (ImageView) this.findViewById(R.id.halfheart2kitch);
+        Activity.halfheart3 = (ImageView) this.findViewById(R.id.halfheart3kitch);
 
-        clueDisplay = (TextView) findViewById(R.id.hintTextBed);
-        hintDisplay = (TextView) findViewById(R.id.hintDispBed);
+        clueDisplay = (TextView) findViewById(R.id.hintTextKitch);
+        hintDisplay = (TextView) findViewById(R.id.hintDispKitch);
 
         initializeArrays();
         initializeClueAndObject(curClueNum);
         Activity.resetHearts();
 
-        poster.setOnClickListener(new View.OnClickListener() {
+        stove.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {
-                objClick("art");
+                objClick("stove");
             }
 
         });
 
-        window.setOnClickListener(new OnClickListener() {
+        fridge.setOnClickListener(new OnClickListener() {
 
             @Override
             public void onClick(View v) {
-                objClick("window");
+                objClick("fridge");
             }
         });
 
-        bed.setOnClickListener(new OnClickListener() {
+        table.setOnClickListener(new OnClickListener() {
 
             @Override
             public void onClick(View v) {
-                objClick("bed");
+                objClick("table");
             }
         });
 
-        books.setOnClickListener(new OnClickListener() {
+        pot.setOnClickListener(new OnClickListener() {
 
             @Override
             public void onClick(View v) {
-                objClick("book");
+                objClick("pot");
             }
         });
 
@@ -141,9 +141,9 @@ public class bedroom extends ActionBarActivity {
 
             @Override
             public void onClick(View v) {
-
                     displayHint();
                 }
+
 
         });
 
@@ -156,9 +156,7 @@ public class bedroom extends ActionBarActivity {
         });
 
 
-
     }
-
 
     public void objClick(String obj) {
         int clueNum=0;
@@ -180,7 +178,7 @@ public class bedroom extends ActionBarActivity {
 
     private void popupWindow() {
         try {
-            LayoutInflater inflater = (LayoutInflater)bedroom.this.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+            LayoutInflater inflater = (LayoutInflater)kitchen.this.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             View layout = inflater.inflate(R.layout.input_prompt,(ViewGroup)findViewById(R.id.popUpEl));
             promptGuess = new PopupWindow(layout,370, 500,true);
             promptGuess.showAtLocation(layout, Gravity.CENTER,0,0);
@@ -189,6 +187,7 @@ public class bedroom extends ActionBarActivity {
             submit = (Button) layout.findViewById(R.id.submitButton);
             Button close = (Button) layout.findViewById(R.id.closeButton);
             msgDisplay = (TextView) layout.findViewById(R.id.msgDisp);
+
 
 
             close.setOnClickListener(new OnClickListener() {
@@ -219,7 +218,7 @@ public class bedroom extends ActionBarActivity {
 
     private void lifePopupWindow() {
         try {
-            LayoutInflater inflater = (LayoutInflater) bedroom.this.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+            LayoutInflater inflater = (LayoutInflater) kitchen.this.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             View layout = inflater.inflate(R.layout.lose_life, (ViewGroup) findViewById(R.id.loseLifeE));
             lifeWindow = new PopupWindow(layout, 370, 500, true);
             lifeWindow.showAtLocation(layout, Gravity.CENTER, 0, 0);
@@ -236,9 +235,13 @@ public class bedroom extends ActionBarActivity {
 
                 @Override
                 public void onClick(View v) {
-                    if (Activity.numLives==0)
-                        resetLevel();
                     lifeWindow.dismiss();
+                    if (Activity.numLives==0) {
+                        resetLevel();
+                        //reedemLife();
+                        // NEED TO WORK ON THIS!
+                    }
+
                 }
             });
 
@@ -252,7 +255,7 @@ public class bedroom extends ActionBarActivity {
     }
 
     public static void initializeArrays() {
-        int[] usedNum = {24,27,27,27,27};
+        int[] usedNum = {23,23,23,23,23};
         for (int i=0;i<totalNum;i++) {
             int r = Activity.randomNumber(totalNum);
             while (hasBeenUsed(r, usedNum)) {
@@ -274,33 +277,32 @@ public class bedroom extends ActionBarActivity {
     }
 
     public void nextLevel() {
-        startActivity(new Intent(bedroom.this, bathroom.class));
+        startActivity(new Intent(kitchen.this, livingroom.class));
     }
 
     public void prepareNextLevel() {
         setUnclickable();
         levelUp.setVisibility(View.VISIBLE);
-        hintDisplay.setText("");
         clueDisplay.setText("");
+        hintDisplay.setText("");
         levelClear = true;
     }
 
     public static void setUnclickable() {
-        poster.setClickable(false);
-        window.setClickable(false);
-        bed.setClickable(false);
-        books.setClickable(false);
+        stove.setClickable(false);
+        fridge.setClickable(false);
+        table.setClickable(false);
+        pot.setClickable(false);
         hintButton.setVisibility(View.INVISIBLE);
     }
 
     public static void setClickable() {
-        poster.setClickable(true);
-        window.setClickable(true);
-        bed.setClickable(true);
-        books.setClickable(true);
+        stove.setClickable(true);
+        fridge.setClickable(true);
+        table.setClickable(true);
+        pot.setClickable(true);
         hintButton.setClickable(true);
     }
-
 
     boolean verifyAnswer (String ans) {
         String ansNeat = ans.toLowerCase().trim();
@@ -322,9 +324,9 @@ public class bedroom extends ActionBarActivity {
     void initializeClueAndObject(int clueNum) {
         if (clueNum>totalNum-1) {
             prepareNextLevel();
+            Log.i("MainActivity","here");
         }
         else {
-
             displayClue(clueNum);
             setObject(clueNum);
         }
@@ -333,7 +335,6 @@ public class bedroom extends ActionBarActivity {
     void displayClue(int clueNum){
         clueDisplay.setText(myClue[clueNum]);
         hintDisplay.setText("");
-
     }
 
     void setObject(int clueNum) {
@@ -341,6 +342,22 @@ public class bedroom extends ActionBarActivity {
         if (clueNum>0) {
             clueState[clueNum-1]=false;
         }
+    }
+
+    void displayHint() {
+        String myString = myObj[curClueNum];
+        String hint = myString.charAt(1) + "";
+        for (int i = 1;i<hintNum;i++) {
+            hint = hint + myString.charAt(i);
+        }
+        hintDisplay.setText(hint);
+        if (hintNum<myString.length()) {
+            hintNum++;
+        }
+    }
+
+    void reedemLife() {
+        startActivity(new Intent(kitchen.this, math_redem.class));
     }
 
     void resetLevel() {
@@ -358,17 +375,6 @@ public class bedroom extends ActionBarActivity {
         }
     }
 
-    void displayHint() {
-        String myString = myObj[curClueNum];
-        String hint = "";
-        for (int i = 0;i<hintNum;i++) {
-            hint = hint + myString.charAt(i);
-        }
-        hintDisplay.setText(hint);
-        if (hintNum<myString.length()) {
-            hintNum++;
-        }
-    }
 
 
 

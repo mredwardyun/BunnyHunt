@@ -1,0 +1,189 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context=".bathroom"
+    android:background="@drawable/bathroombg">
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/bathtub"
+        android:src="@drawable/bathtub2"
+        android:background="@null"
+        android:layout_below="@+id/heart3bath"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/rug"
+        android:src="@drawable/rugsmall2"
+        android:background="@null"
+        android:layout_below="@+id/sink"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="7dp" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/bunnybath"
+        android:background="@null"
+        android:src="@drawable/bunnysmall"
+        android:layout_below="@+id/duck"
+        android:layout_centerHorizontal="true" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/shampoo"
+        android:src="@drawable/shampoo"
+        android:background="@null"
+        android:layout_above="@+id/duck"
+        android:layout_toRightOf="@+id/heart3bath"
+        android:layout_toEndOf="@+id/heart3bath" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/towel"
+        android:background="@null"
+        android:src="@drawable/towelsmall"
+        android:layout_above="@+id/shampoo"
+        android:layout_alignRight="@+id/dispHintBath"
+        android:layout_alignEnd="@+id/dispHintBath" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/sink"
+        android:src="@drawable/sinksmall2"
+        android:background="@null"
+        android:layout_alignTop="@+id/bathtub"
+        android:layout_toRightOf="@+id/bunnybath"
+        android:layout_toEndOf="@+id/bunnybath" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/duck"
+        android:layout_centerVertical="true"
+        android:src="@drawable/duck"
+        android:background="@null"
+        android:layout_alignLeft="@+id/towel"
+        android:layout_alignStart="@+id/towel"
+        android:adjustViewBounds="true"
+        android:focusableInTouchMode="true" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/heart1bath"
+        android:src="@drawable/heart45"
+        android:layout_alignParentTop="true"
+        android:visibility="visible" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/halfheart1bath"
+        android:src="@drawable/halfheart45"
+        android:layout_above="@+id/portrait"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:visibility="invisible" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/heart2bath"
+        android:src="@drawable/heart45"
+        android:layout_below="@+id/heart1bath"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:focusableInTouchMode="true"
+        android:visibility="visible" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/halfheart2bath"
+        android:src="@drawable/halfheart45"
+        android:visibility="invisible"
+        android:layout_alignTop="@+id/heart2bath"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/heart3bath"
+        android:src="@drawable/heart45"
+        android:focusableInTouchMode="true"
+        android:layout_below="@+id/heart2bath"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:visibility="visible" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/halfheart3bath"
+        android:src="@drawable/halfheart45"
+        android:visibility="invisible"
+        android:layout_below="@+id/heart2bath"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hint"
+        android:id="@+id/hintButtonBath"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/duck"
+        android:layout_alignEnd="@+id/duck" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:id="@+id/hintTextBath"
+        android:textSize="15dp"
+        android:layout_below="@+id/rug"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_above="@+id/hintButtonBath"
+        android:layout_alignRight="@+id/sink"
+        android:layout_alignEnd="@+id/sink" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/dispHintBath"
+        android:visibility="visible"
+        android:singleLine="true"
+        android:textSize="20dp"
+        android:paddingTop="6dp"
+        android:layout_below="@+id/hintTextBath"
+        android:layout_alignLeft="@+id/bunnybath"
+        android:layout_alignStart="@+id/bunnybath"
+        android:layout_alignBottom="@+id/hintButtonBath"
+        android:layout_alignRight="@+id/bunnybath"
+        android:layout_alignEnd="@+id/bunnybath" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/levelUpBath"
+        android:src="@drawable/arrow"
+        android:background="@null"
+        android:visibility="invisible"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/hintTextBath"
+        android:layout_alignEnd="@+id/hintTextBath" />
+
+</RelativeLayout>

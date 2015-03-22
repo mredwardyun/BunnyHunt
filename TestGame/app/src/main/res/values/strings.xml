@@ -8,5 +8,10 @@
     <string name="title_activity_bedroom">bedroom</string>
     <string name="title_activity_menu">Menu</string>
     <string name="title_activity_main_menu">MainMenu</string>
+    <string name="title_activity_homescreen">homescreen</string>
+    <string name="title_activity_math_redem">math_redem</string>
+    <string name="title_activity_kitchen">kitchen</string>
+    <string name="title_activity_bathroom">bathroom</string>
+    <string name="title_activity_livingroom">livingroom</string>
 
 </resources>
